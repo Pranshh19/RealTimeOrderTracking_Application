@@ -1,0 +1,9 @@
+We used Yarn instead of NPM because it's faster
+
+to run nodemon on yarn 
+you need to do:  yarn dev
+and also add the following code in json file
+"scripts":{
+    "serve":"node server.js",
+    "dev": "nodemon server.js"
+  },
