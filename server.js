@@ -7,6 +7,10 @@ const expressLayout =require('express-ejs-layouts')
 const path=require('path')  //inbuilt-lib
 
 
+//Assets
+app.use(express.static('public'))
+
+
 app.get('/',(req,res)=>{
     res.render('home')  //here you can paste html file
 })
