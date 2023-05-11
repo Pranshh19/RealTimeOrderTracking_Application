@@ -13,7 +13,7 @@ const flash=require('express-flash')
 const MongoDbStore=require('connect-mongo')
 const { options } = require('laravel-mix')
 const passport =require('passport')
-
+const Emitter = require('events')
 
 //Database Connection for MongoDB>=6.0v
 const connection=mongoose.connection;
@@ -35,6 +35,12 @@ let store =new MongoDbStore({
   mongoUrl: url,
   collection: "sessions"
 });
+
+//Event Emitter
+
+const eventEmitter = new Emitter()
+app.set('eventEmitter',eventEmitter)
+
 
 //Session Config
 app.use(
@@ -82,7 +88,25 @@ app.set('view engine','ejs')
 require('./routes/web')(app)  // we imported the file from web.js and then added () to call that function 
 
 
-app.listen(PORT, ()=>{
+const server = app.listen(PORT, ()=>{
     console.log(`Listening on port ${PORT}`)
 })
 
+
+//Socket
+
+const io = require('socket.io')(server)
+io.on('connection', (socket) => {
+      // Join
+      socket.on('join', (orderId) => {
+        socket.join(orderId)
+      })
+})
+
+eventEmitter.on('orderUpdated', (data) => {
+  io.to(`order_${data.id}`).emit('orderUpdated', data)
+})
+
+eventEmitter.on('orderPlaced',()=>{
+  io.to('adminRoom').emit('orderPlaced',data)
+})

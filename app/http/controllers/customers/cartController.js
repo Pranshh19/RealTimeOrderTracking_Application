@@ -32,9 +32,23 @@ function cartController() {
                 cart.totalPrice= cart.totalPrice+req.body.price
              }
             return res.json({totalQty:req.session.cart.totalQty})
+        },
+        
+        deleteInCart(req,res){
+        let cart=req.session.cart
+        let item=cart.items;
+        let productid=req.body.id;
+        //   console.log(req.body.prodId);
+        //    console.log(item);
+        //    console.log(cart);
+        //    const products= req.body;
+        
+            res.redirect('/cart')
         }
+
     }
 
 }
+
 
 module.exports = cartController
