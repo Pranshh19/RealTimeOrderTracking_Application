@@ -1,6 +1,6 @@
 # RealTimeOrderTracking_Application
 
-**About Project**
+**About Project** <br>
 : Developed a real-time order tracking application with Admin Page, Customer Page, Homepage, Menu Page, Cart page, and Order Page. <br>
 : Utilized JavaScript, Node.js, HTML, CSS, and relevant frameworks to build the application. <br>
 : Implemented features like real-time updates, order status tracking, secure user authentication, and an intuitive user interface. <br>
