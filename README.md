@@ -1,11 +1,11 @@
 # RealTimeOrderTracking_Application
 
 **About Project**
-: Developed a real-time order tracking application with Admin Page, Customer Page, Homepage, Menu Page, Cart page, and Order Page.
-: Utilized JavaScript, Node.js, HTML, CSS, and relevant frameworks to build the application.
-: Implemented features like real-time updates, order status tracking, secure user authentication, and an intuitive user interface.
-: Contributed to the development of specific modules, integration of APIs, and data synchronization.
-: Achieved improved order management efficiency and enhanced customer experience.
+: Developed a real-time order tracking application with Admin Page, Customer Page, Homepage, Menu Page, Cart page, and Order Page. <br>
+: Utilized JavaScript, Node.js, HTML, CSS, and relevant frameworks to build the application. <br>
+: Implemented features like real-time updates, order status tracking, secure user authentication, and an intuitive user interface. <br>
+: Contributed to the development of specific modules, integration of APIs, and data synchronization. <br>
+: Achieved improved order management efficiency and enhanced customer experience. <br>
 
 **Hero Page**
 ![Hero1](https://github.com/Pranshh19/RealTimeOrderTracking_Application/assets/95425577/8289d47b-f979-4023-8b34-3a298cc64527)
